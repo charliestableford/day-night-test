@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>    
+    <style>
+        .black{
+            background:black;
+            color: white;
+        }
+
+        .white{
+            background: white;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <input type="checkbox" value = "night" class="night">
+    <label>night</label>
+    <script>
+        console.log('made it');
+        var nightToggle = document.querySelector('.night');
+        var body = document.querySelector('body');
+        var black = document.querySelector('.black');
+
+        var count = 0;
+
+        nightToggle.addEventListener('click', function(){
+            // console.log('clicked');
+            if(nightTime = true) {
+                body.classList.toggle('black');
+                // keep track of how many times we have clicked jic
+                count ++;
+                console.log(count);
+            }
+        });
+
+        let sun = new Date();
+        let middle = sun.getHours();
+        // let middle = 10;
+        console.log(sun);
+        console.log(middle);
+
+        // you could turn this into a function and do a setTimeout if you wanted it to go back to the corresponding light or dark
+            if(middle > 5 && middle < 20){ // these numbers are wrong but you get the jist
+                document.onload = body.classList.add('black');
+                console.log(middle);
+            }
+        
+    </script>
+</body>
+</html>s
